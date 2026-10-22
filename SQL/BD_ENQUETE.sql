@@ -107,6 +107,24 @@ VALUES ('Não o macaco não come banana', 2),
 	   ('A uva não ta na arvore de maça', 4),
        ('A limonada é verde', 5),
        ('O sapo lava o pé', 3),
-       ('Mariana conta 6', 1);]
+       ('Mariana conta 6', 1);
        
 SELECT * FROM PERGUNTAS;
+
+INSERT INTO RESPOSTAS (RES_DESCRICAO , RES_CERTA ,FK_PER_CODIGO)
+VALUES ('Uva', 'E', 16),
+	   ('No cacho', 'E', 17),
+       ('Verde', 'E', 23),
+       ('O dedo', 'E',24 ),
+       ('6', 'E', 20);
+       
+SELECT * FROM RESPOSTAS;
+
+INSERT INTO USUARIO_RESPONDE_ENQUETE(URE_DATA, FK_USU_CODIGO, FK_ENQ_CODIGO)
+VALUES (NOW(), 1, 3), 
+	   (NOW(), 5, 2),
+       (NOW(), 2, 1), 
+       (NOW(), 3, 4), 
+       (NOW(), 4, 5);
+       
+SELECT * FROM USUARIO_RESPONDE_ENQUETE;
